@@ -5,7 +5,7 @@ interface PostProps {
   post: typeofPosts;
 }
 
-const Post = ({ post }: PostProps) => {
+export default function Post({ post }: PostProps) {
   return (
     <div>
       <span>{post.id}</span>
@@ -17,5 +17,4 @@ const Post = ({ post }: PostProps) => {
       </Link>
     </div>
   );
-};
-export default Post;
+}

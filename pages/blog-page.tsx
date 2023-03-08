@@ -10,7 +10,7 @@ interface TypeofPosts {
   posts: typeofPosts[];
 }
 
-const Blog = ({ posts }: TypeofPosts) => {
+export default function Blog({ posts }: TypeofPosts) {
   return (
     <Layout title="Blog">
       <ul className="m-10">
@@ -19,7 +19,7 @@ const Blog = ({ posts }: TypeofPosts) => {
       </ul>
     </Layout>
   );
-};
+}
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = await getAllPostsData();
@@ -27,5 +27,3 @@ export const getStaticProps: GetStaticProps = async () => {
     props: { posts },
   };
 };
-
-export default Blog;
